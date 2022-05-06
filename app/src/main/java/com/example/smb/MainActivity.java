@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private DBHandler handler;
-    private Button test;
     private EditText ip,id,password;
     private Button connect,usb,Setting,Eshare;
     private ArrayList<String> fileList = new ArrayList<>();
