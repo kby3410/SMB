@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     private volatile boolean running = true;
     private ProgressDialog pDialog;
     private File targetFile;
-    private static final String IP_ADDRESS = "https://www.krizer.com/smb1.1.apk";
+    private static final String IP_ADDRESS = "http://www.krizer.co.kr/krizer_edit/smb1.1.apk";
     String filename = "test.apk";
     String Ip_text = "IP or SMB 설정을 확인해주십시오.";
     String Id_text = "아이디 or 비밀번호를 확인해주십시오.";
@@ -418,9 +418,9 @@ public class MainActivity extends AppCompatActivity {
                             packageInfo = getPackageManager().getPackageInfo(pack.get(i).activityInfo.applicationInfo.packageName, 0);
 
                             if (test.equals(pack.get(i).activityInfo.applicationInfo.packageName)) {
-                                System.out.println("됐당1" + packageInfo.versionName.substring(0, 3));
-                                System.out.println("됐당1" + conn.getURL().getFile().substring(4, 7));
-                                if (conn.getURL().getFile().substring(4, 7).equals(packageInfo.versionName.substring(0, 3))) {
+                                System.out.println("app버전" + packageInfo.versionName);
+                                System.out.println("서버버전" + conn.getURL().getFile().substring(16, 19));
+                                if (conn.getURL().getFile().substring(16, 19).equals(packageInfo.versionName.substring(0, 3))) {
                                     System.out.println("됐당" + packageInfo.versionName);
                                     System.out.println("됐당" + conn.getURL().getFile());
                                 } else {
